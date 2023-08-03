@@ -1,6 +1,8 @@
 import './globals.css'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
+import { ClerkProvider } from '@clerk/nextjs'
+// import Header from '@/components/header'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -15,8 +17,15 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
-      <body className={inter.className}>{children}</body>
-    </html>
+    <ClerkProvider>
+      <html lang="en">
+        <body className={`${inter.className} bg-yellow-100 md:bg-purple-300`}>
+          {/* <Header /> */}
+          <main className="flex grow w-full">
+            {children}
+          </main>
+        </body>
+      </html>
+    </ClerkProvider>
   )
 }

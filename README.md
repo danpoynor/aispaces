@@ -1,34 +1,92 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# AiSpaces.com Website Code
 
-## Getting Started
+Built with
 
-First, run the development server:
+- [Next.js](https://nextjs.org/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [Zod](https://zod.dev/): TypeScript-first schema validation with static type inference.
+- [React Hook Form](https://react-hook-form.com/): Performant, flexible and extensible forms with easy-to-use validation.
+- [Vercel](https://vercel.com/)
+- [Lucide](https://lucide.dev/): Icons by Vercel
+- [react-markdonw](https://github.com/remarkjs/react-markdown): React component to render markdown.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+Inspired by:
+Build a SaaS AI Platform with Next.js 13, React, Tailwind, Prisma, Stripe | Full Tutorial 2023
+<https://www.youtube.com/watch?v=ffJ38dBzrlY>
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Services Used
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- [Vercel](https://vercel.com/): Hosting
+- [Stripe](https://stripe.com/): Payments
+- [Clerk](https://dashboard.clerk.com/): Authentication and User Management
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## Potential Features for Development
 
-## Learn More
+- cover-letter-buddy 
+- language translation
+- promptopia feature
+  - https://www.youtube.com/watch?v=wm5gMKuwSYk&t=2671s
+  - https://medium.com/@nayan.j.paul/building-a-reusable-prompt-management-system-for-large-language-models-810e92284b27
+  - https://prst.ai
+- sql generator
+  - https://www.youtube.com/watch?v=uRQH2CFvedY
+- Create a movie pitch using an AI Chatbot
+  - https://www.youtube.com/watch?v=jlogLBkPZ2A
+- Create a movie script using an AI Chatbot
+- Create a book using an AI Chatbot
+- Create a song using an AI Chatbot
+- Create a poem using an AI Chatbot
+- Create a blog post using an AI Chatbot
+- Generate logos
+- Generate website designs
+- Generate business names
+- Generate business ideas
+- Generate business plans
+- Generate business pitches
+- Generate business proposals
+- Generate business contracts
+- Generate business agreements
+- Generate business emails
+- Generate contracts
+- Generate agreements
+- Generate emails
+- Bulk generate social media images <https://www.dito.so/>
+- Generate icons
+- Generate app icons
+- Add voice input like seen at <https://usellm.org/>
+- Generate a travel guide <https://usellm.org/docs>, <https://usellm.org/docs/examples/streamlit-app>
 
-To learn more about Next.js, take a look at the following resources:
+## Addiontal Incentives to Use AiSpaces.com
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- Give away a Chrome plugin that allows you to use the AI Chatbot on any website. AiHelp
+- Give away a Chrome plugin that allows you to summarize web pages <https://usellm.org/docs/examples/chrome-extension>
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## Potential Workflows for Development
 
-## Deploy on Vercel
+### AI Automation Agency (AAA) Services
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+1. AI Chatbots
+	- BotPress
+2. Content Generation Systems
+	- Stack.ai
+	Example: Input previous meal plans from trainer and get new ideas for meal plans.
+3. AI Enhanced Automations
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## Dev Notes
+
+- `<Link>` elements are for navigating between pages in your application. It works similar to the HTML anchor tag, but it's more powerful. For example, it ensures your application pages are preloaded, prefetches page assets, navigates without a browser refresh, runs your page code, and more.
+
+DOCS: <https://nextjs.org/docs/pages/api-reference/components/link>
+
+- `useRouter` hook gives you access to the `router` object. We can use it to get the current route pathname. This is commonly used to conditionally style the navigation links based on the current path name.
+
+The `useRouter` hook allows you to programmatically change routes inside [Client Components](https://nextjs.org/docs/getting-started/react-essentials).
+
+Recommendation: Use the [`<Link>` component](https://nextjs.org/docs/app/building-your-application/routing/linking-and-navigating#link-component) for navigation unless you have a specific requirement for using `useRouter`.
+
+DOCS: <https://nextjs.org/docs/pages/api-reference/functions/use-router>
+
+- `useEffect` hook is used to perform side effects in function components. It's similar to `componentDidMount` and `componentDidUpdate` in React classes.
+
+DOCS: <https://react.dev/reference/react/useEffect>

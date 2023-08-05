@@ -56,6 +56,17 @@ Build a SaaS AI Platform with Next.js 13, React, Tailwind, Prisma, Stripe | Full
 - Generate app icons
 - Add voice input like seen at <https://usellm.org/>
 - Generate a travel guide <https://usellm.org/docs>, <https://usellm.org/docs/examples/streamlit-app>
+- Summarize PDFs
+- Summarize terms and conditions (use links or copy/paste text)
+- Summarize privacy policies (use links or copy/paste text)
+- Generate graphcs
+- Planning and strategy for business
+- Thank you note generation
+- Marketing email generation
+- Summarize meeting transcripts <https://www.ibm.com/products/watsonx-ai>
+- Convert blog posts to podcasts
+- Convert blog posts to videos
+- Integrate with removepaywall.com
 
 ## Addiontal Incentives to Use AiSpaces.com
 

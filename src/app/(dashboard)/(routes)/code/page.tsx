@@ -159,7 +159,7 @@ export default function CodePage() {
                 <ReactMarkdown
                   components={{
                     pre: ({ node, ...props }) => (
-                      <div className="overflow-auto w-full my-2 p-2 bg-black/10 rounded-lg">
+                      <div className="overflow-auto w-full mb-2 p-2 bg-black/10 rounded-lg">
                         <pre {...props} />
                       </div>
                     ),

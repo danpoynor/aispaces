@@ -10,7 +10,7 @@ export default function UserAvatar() {
   const { user } = useUser()
 
   return (
-    <Avatar className='w-8 h-8'>
+    <Avatar className='w-12 h-12'>
       <AvatarImage src={user?.profileImageUrl} />
       <AvatarFallback>
         {user?.firstName?.charAt(0)}

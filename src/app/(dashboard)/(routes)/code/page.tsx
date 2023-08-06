@@ -2,7 +2,6 @@
 
 import axios from "axios"
 import * as z from "zod"
-import { Code } from "lucide-react"
 import { useForm } from "react-hook-form"
 import { zodResolver } from "@hookform/resolvers/zod"
 import { useRouter } from "next/navigation"
@@ -24,6 +23,7 @@ import UserAvatar from "@/components/user-avatar"
 import BotAvatar from "@/components/bot-avatar"
 
 import { cn } from "@/lib/utils"
+import { pageData } from "./constants"
 import { formSchema } from "./constants"
 import { useState } from "react"
 
@@ -68,11 +68,11 @@ export default function CodePage() {
   return (
     <div>
       <Heading
-        title='Code'
-        description='Generate code using descriptive text.'
-        icon={Code}
-        iconColor='text-green-700'
-        bgColor='bg-green-700/10'
+        title={pageData.heading}
+        description={pageData.description}
+        icon={pageData.icon}
+        iconColor={pageData.iconColor}
+        bgColor={pageData.bgColor}
       />
       <div className="px-4 lg:px-8">
         <div className="">
@@ -106,7 +106,7 @@ export default function CodePage() {
                       <Input
                         className="border-0 outline-none focus-visible:ring-0 focus-visible:ring-transparent"
                         disabled={isLoading}
-                        placeholder="Simple toggle button using React hooks."
+                        placeholder={pageData.promptPlaceholder}
                         {...field}
                       />
                     </FormControl>
@@ -135,8 +135,8 @@ export default function CodePage() {
           {messages.length === 0 && !isLoading && (
             <div className="text-center text-gray-500">
               <Empty
-                title="No conversation started."
-                description="Start by typing a message in the prompt field above."
+                title={pageData.emptyLabel}
+                description={pageData.emptyDescription}
               />
             </div>
           )}

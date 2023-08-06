@@ -1,4 +1,16 @@
+import { ImageIcon } from "lucide-react"
 import * as z from 'zod';
+
+export const pageData = {
+  heading: "Image Generation",
+  description: "Turn your prompt into an image.",
+  icon: ImageIcon,
+  iconColor: "text-pink-700",
+  bgColor: "bg-pink-700/10",
+  promptPlaceholder: "A picture of a horse in the Swiss alps",
+  emptyLabel: "No images generated.",
+  emptyDescription: "Start by filling out the form above."
+}
 
 export const formSchema = z.object({
   prompt: z.string().min(1, {

@@ -20,7 +20,6 @@ export default function RootLayout({
     <ClerkProvider>
       <html lang="en">
         <body className={`${inter.className} bg-white`}>
-          {/* <Header /> */}
           <main className="flex grow w-full">
             {children}
           </main>

@@ -2,7 +2,6 @@
 
 import axios from "axios"
 import * as z from "zod"
-import { MessageSquare } from "lucide-react"
 import { useForm } from "react-hook-form"
 import { zodResolver } from "@hookform/resolvers/zod"
 import { useRouter } from "next/navigation"
@@ -23,6 +22,7 @@ import UserAvatar from "@/components/user-avatar"
 import BotAvatar from "@/components/bot-avatar"
 
 import { cn } from "@/lib/utils"
+import { pageData } from "./constants"
 import { formSchema } from "./constants"
 import { useState } from "react"
 
@@ -67,11 +67,11 @@ export default function ConversationPage() {
   return (
     <div>
       <Heading
-        title='Conversation'
-        description='Our most advanced converstion model.'
-        icon={MessageSquare}
-        iconColor='text-violet-500'
-        bgColor='bg-violet-500/10'
+        title={pageData.heading}
+        description={pageData.description}
+        icon={pageData.icon}
+        iconColor={pageData.iconColor}
+        bgColor={pageData.bgColor}
       />
       <div className="px-4 lg:px-8">
         <div className="">
@@ -105,7 +105,7 @@ export default function ConversationPage() {
                       <Input
                         className="border-0 outline-none focus-visible:ring-0 focus-visible:ring-transparent"
                         disabled={isLoading}
-                        placeholder="How do I calculate the radius of a circle?"
+                        placeholder={pageData.promptPlaceholder}
                         {...field}
                       />
                     </FormControl>
@@ -134,8 +134,8 @@ export default function ConversationPage() {
           {messages.length === 0 && !isLoading && (
             <div className="text-center text-gray-500">
               <Empty
-                title="No conversation started."
-                description="Start by typing a message in the prompt field above."
+                title={pageData.emptyLabel}
+                description={pageData.emptyDescription}
               />
             </div>
           )}

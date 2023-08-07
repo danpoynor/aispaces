@@ -1,6 +1,6 @@
 # AiSpaces.com Website Code
 
-Built with
+## Built with
 
 - [Next.js](https://nextjs.org/)
 - [Tailwind CSS](https://tailwindcss.com/)
@@ -20,6 +20,7 @@ Build a SaaS AI Platform with Next.js 13, React, Tailwind, Prisma, Stripe | Full
 - [Vercel](https://vercel.com/): Hosting
 - [Stripe](https://stripe.com/): Payments
 - [Clerk](https://dashboard.clerk.com/): Authentication and User Management
+- [Prisma](https://www.prisma.io/): Database
 
 ## Potential Features for Development
 
@@ -67,11 +68,17 @@ Build a SaaS AI Platform with Next.js 13, React, Tailwind, Prisma, Stripe | Full
 - Convert blog posts to podcasts
 - Convert blog posts to videos
 - Integrate with removepaywall.com
+- Look at <https://youai.ai/mindstudio>, <https://youai.ai/> for ideas
+- Look at Replicate for ideas (perhaps use for generating business plans, headshots, etc.) <https://replicate.com/showcase>, <https://replicate.com/>
 
 ## Addiontal Incentives to Use AiSpaces.com
 
 - Give away a Chrome plugin that allows you to use the AI Chatbot on any website. AiHelp
 - Give away a Chrome plugin that allows you to summarize web pages <https://usellm.org/docs/examples/chrome-extension>
+
+## Tutorials To Go Through
+
+- <https://replicate.com/docs/get-started/nextjs>
 
 ## Potential Workflows for Development
 

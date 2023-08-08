@@ -28,7 +28,7 @@ export default function MobileSidebar() {
         <Menu />
       </Button>
       </SheetTrigger>
-      <SheetContent side="left" className="p-0">
+      <SheetContent side="left" className="p-0 w-64">
         <Sidebar />
       </SheetContent>
     </Sheet>

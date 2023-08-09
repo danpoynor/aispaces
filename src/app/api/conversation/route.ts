@@ -26,6 +26,10 @@ export async function POST(
       return new NextResponse('OpenAI API Key not configured', { status: 500 });
     }
 
+    if (!messages) {
+      return new NextResponse('Messages are required', { status: 400 });
+    }
+
     // Check if user is still on free trial
     const freeTrial = await checkApiLimit();
 
@@ -34,17 +38,13 @@ export async function POST(
       return new NextResponse('Free trial limit reached', { status: 403 });
     }
 
-    if (!messages) {
-      return new NextResponse('Messages are required', { status: 400 });
-    }
-
     const response = await openai.createChatCompletion({
       model: "gpt-3.5-turbo",
       messages
     });
 
     // Increase API limit for user
-    await increaseApiLimit(userId);
+    await increaseApiLimit();
 
     return NextResponse.json(response.data.choices[0].message);
   } catch (error) {

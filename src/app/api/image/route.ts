@@ -53,7 +53,7 @@ export async function POST(
     });
 
     // Increase API limit for user
-    await increaseApiLimit(userId);
+    await increaseApiLimit();
 
     return NextResponse.json(response.data.data);
   } catch (error) {

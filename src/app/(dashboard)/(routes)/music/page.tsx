@@ -51,6 +51,8 @@ export default function MusicPage() {
       // TODO: Open Pro Modal
       console.log(error)
     } finally {
+      // Rehydrate all server components with new data
+      // This is how the free generations counter is incremented
       router.refresh()
     }
   }

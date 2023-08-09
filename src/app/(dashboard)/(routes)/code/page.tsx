@@ -21,6 +21,7 @@ import { Empty } from "@/components/empty"
 import { Loader } from "@/components/loader"
 import UserAvatar from "@/components/user-avatar"
 import BotAvatar from "@/components/bot-avatar"
+import { useProModal } from "@/hooks/use-pro-modal"
 
 import { cn } from "@/lib/utils"
 import { pageData } from "./constants"
@@ -28,6 +29,7 @@ import { formSchema } from "./constants"
 import { useState } from "react"
 
 export default function CodePage() {
+  const proModal = useProModal()
   const router = useRouter()
   const [messages, setMessages] = useState<ChatCompletionRequestMessage[]>([])
 
@@ -58,8 +60,10 @@ export default function CodePage() {
       form.reset()
 
     } catch (error: any) {
-      // TODO: Open Pro Modal
-      console.log(error)
+      // Open the Pro modal when the user has exceeded the free limit
+      if (error?.response?.status === 403) {
+        proModal.onOpen()
+      }
     } finally {
       // Rehydrate all server components with new data
       // This is how the free generations counter is incremented

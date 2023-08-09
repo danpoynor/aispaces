@@ -17,12 +17,14 @@ import { Input } from "@/components/ui/input"
 import { Button } from "@/components/ui/button"
 import { Empty } from "@/components/empty"
 import { Loader } from "@/components/loader"
+import { useProModal } from "@/hooks/use-pro-modal"
 
 import { pageData } from "./constants"
 import { formSchema } from "./constants"
 import { useState } from "react"
 
 export default function MusicPage() {
+  const proModal = useProModal()
   const router = useRouter()
   const [music, setMusic] = useState<string>()
 
@@ -48,8 +50,10 @@ export default function MusicPage() {
       form.reset()
 
     } catch (error: any) {
-      // TODO: Open Pro Modal
-      console.log(error)
+      // Open the Pro modal when the user has exceeded the free limit
+      if (error?.response?.status === 403) {
+        proModal.onOpen()
+      }
     } finally {
       // Rehydrate all server components with new data
       // This is how the free generations counter is incremented

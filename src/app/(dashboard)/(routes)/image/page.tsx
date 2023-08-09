@@ -27,16 +27,18 @@ import {
 import { Input } from "@/components/ui/input"
 import { Button } from "@/components/ui/button"
 import { cn } from "@/lib/utils"
-import { pageData } from "./constants"
+import { Card, CardFooter } from "@/components/ui/card"
+import { useProModal } from "@/hooks/use-pro-modal"
 import {
   amountOptions,
   formSchema,
+  pageData,
   resolutionOptions
 } from "./constants"
-import { Card, CardFooter } from "@/components/ui/card"
 import Image from "next/image"
 
 export default function ImagePage() {
+  const proModal = useProModal()
   const router = useRouter()
   const [images, setImages] = useState<string[]>([])
 
@@ -65,8 +67,10 @@ export default function ImagePage() {
       form.reset()
 
     } catch (error: any) {
-      // TODO: Open Pro Modal
-      console.log(error)
+      // Open the Pro modal when the user has exceeded the free limit
+      if (error?.response?.status === 403) {
+        proModal.onOpen()
+      }
     } finally {
       // Rehydrate all server components with new data
       // This is how the free generations counter is incremented

@@ -1,7 +1,6 @@
 import Navbar from "@/components/navbar"
 import Sidebar from "@/components/sidebar"
 import { getApiLimitCount } from "@/lib/api-limit"
-import { SIDEBAR_WIDTH } from "@/constants"
 
 export default async function DashboardLayout({
   children
@@ -15,9 +14,9 @@ export default async function DashboardLayout({
       <div className={`
         hidden
         h-full
-        w-${SIDEBAR_WIDTH}
+        w-72
         md:flex
-        md:w-${SIDEBAR_WIDTH}
+        md:w-72
         md:flex-col
         md:fixed
         md:inset-y-0
@@ -26,7 +25,7 @@ export default async function DashboardLayout({
         <Sidebar apiLimitCount={apiLimitCount} />
       </div>
       <main className={`
-        md:pl-${SIDEBAR_WIDTH}
+        md:pl-72
       `}>
         <Navbar />
         {children}

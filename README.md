@@ -70,6 +70,11 @@ Build a SaaS AI Platform with Next.js 13, React, Tailwind, Prisma, Stripe | Full
 - Integrate with removepaywall.com
 - Look at <https://youai.ai/mindstudio>, <https://youai.ai/> for ideas
 - Look at Replicate for ideas (perhaps use for generating business plans, headshots, etc.) <https://replicate.com/showcase>, <https://replicate.com/>
+- IA Image editing solutions <https://vanceai.com/api/?
+- Trip Planner <https://ui8.net/enver-studio-ffdda4/products/triperz---ai-trip-planner-app-ui-kit>
+- Ideas for teachers on how to use AI <https://www.oneusefulthing.org/p/using-ai-to-make-teaching-easier>
+- Might be some other interesting ideas in the newsletter at <https://www.oneusefulthing.org/archive>
+
 
 ## Addiontal Incentives to Use AiSpaces.com
 
@@ -79,6 +84,17 @@ Build a SaaS AI Platform with Next.js 13, React, Tailwind, Prisma, Stripe | Full
 ## Tutorials To Go Through
 
 - <https://replicate.com/docs/get-started/nextjs>
+
+## TODO
+
+- Add favicon.ico to app/ folder.
+- Add opengraph-image.png to public folder (REF: 18:20 in <https://www.youtube.com/watch?v=DfukYzUonnk>)
+- Colocate .css, .test.js, and .stories.js files with their respective .tsx files (REF: 17:05 in <https://www.youtube.com/watch?v=DfukYzUonnk>)
+- Add Google Tag Manager and test with Google Analytics
+- Add unit tests
+- Add create ping cronjob to monitor and report uptime
+- Get Strip Working!!!
+- Finsish tutorial!!!
 
 ## Potential Workflows for Development
 

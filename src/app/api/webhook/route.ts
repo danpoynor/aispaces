@@ -18,7 +18,7 @@ export async function POST(req: Request) {
       process.env.STRIPE_WEBHOOK_SECRET!
     )
   } catch (error: any) {
-    return NextResponse(`Webhook Error: ${error.message}`, { status: 400 })
+    return new NextResponse(`Webhook Error: ${error.message}`, { status: 400 })
   }
 
   const session = event.data.object as Stripe.Checkout.Session
@@ -29,7 +29,7 @@ export async function POST(req: Request) {
     )
 
     if (!session.metadata?.userId) {
-      return NextResponse("Unauthorized. User id is required", { status: 400 })
+      return new NextResponse("Unauthorized. User id is required", { status: 400 })
     }
 
     await prismadb.userSubscription.create({

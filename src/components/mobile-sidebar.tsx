@@ -35,7 +35,7 @@ export default function MobileSidebar({
       </Button>
       </SheetTrigger>
       <SheetContent side="left" className="p-0 w-64">
-        <Sidebar apiLimitCount={apiLimitCount} />
+        <Sidebar apiLimitCount={apiLimitCount || 0} />
       </SheetContent>
     </Sheet>
   )

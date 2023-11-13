@@ -76,14 +76,14 @@ export default function Sidebar({ apiLimitCount = 0 }: SidebarProps) {
 
   return (
     <div className="relative overflow-hidden space-y-4 py-4 flex flex-col h-full bg-[#051937] text-white">
-      <div class="absolute -left-40 -top-64 transform-gpu blur-3xl rotate-[17deg]" aria-hidden="true">
-        <div class="aspect-[1097/845] w-[28.5625rem] bg-gradient-to-r from-[#ff4694] to-[#363cf8] opacity-[0.3]"></div>
+      <div className="absolute -left-40 -top-64 transform-gpu blur-3xl rotate-[17deg]" aria-hidden="true">
+        <div className="aspect-[1097/845] w-[28.5625rem] bg-gradient-to-r from-[#ff4694] to-[#363cf8] opacity-[0.3]"></div>
       </div>
-      <div class="absolute -right-96 top-[18rem] transform-gpu blur-3xl rotate-45" aria-hidden="true">
-        <div class="aspect-[1097/845] w-[28.5625rem] bg-gradient-to-r from-[#004d7a] to-[#776fff] opacity-[0.6]"></div>
+      <div className="absolute -right-96 top-[18rem] transform-gpu blur-3xl rotate-45" aria-hidden="true">
+        <div className="aspect-[1097/845] w-[28.5625rem] bg-gradient-to-r from-[#004d7a] to-[#776fff] opacity-[0.6]"></div>
       </div>
-      <div class="absolute -left-72 top-[42rem] transform-gpu blur-3xl" aria-hidden="true">
-        <div class="aspect-[1097/845] w-[28.5625rem] bg-gradient-to-r from-[#00297a] to-[#ff1979] opacity-[0.25]"></div>
+      <div className="absolute -left-72 top-[42rem] transform-gpu blur-3xl" aria-hidden="true">
+        <div className="aspect-[1097/845] w-[28.5625rem] bg-gradient-to-r from-[#00297a] to-[#ff1979] opacity-[0.25]"></div>
       </div>
       <div className="relative px-3 py-6 flex-1">
         <Link href="/dashboard" className="flex items-center justify-start w-full pl-4 mb-10">

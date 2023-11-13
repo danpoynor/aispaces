@@ -4,8 +4,14 @@ import Replicate from 'replicate';
 
 import { increaseApiLimit, checkApiLimit } from '@/lib/api-limit';
 
+const token = process.env.REPLICATE_API_TOKEN;
+
+if (!token) {
+  throw new Error("REPLICATE_API_TOKEN is not defined");
+}
+
 const replicate = new Replicate({
-  auth: process.env.REPLICATE_API_TOKEN,
+  auth: token,
 });
 
 export async function POST(

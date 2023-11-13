@@ -70,15 +70,23 @@ const FormItemContext = React.createContext<FormItemContextValue>(
   {} as FormItemContextValue
 )
 
+type FormItemProps = React.HTMLAttributes<HTMLDivElement> & {
+  label?: string;
+  error?: string;
+};
+
 const FormItem = React.forwardRef<
   HTMLDivElement,
-  React.HTMLAttributes<HTMLDivElement>
->(({ className, ...props }, ref) => {
+  FormItemProps
+>(({ className, label, error, ...props }, ref) => {
   const id = React.useId()
 
   return (
     <FormItemContext.Provider value={{ id }}>
-      <div ref={ref} className={cn("space-y-2", className)} {...props} />
+      <div ref={ref} className={cn("space-y-2", className, error && "error-class")} {...props}>
+        {label && <Label htmlFor={id}>{label}</Label>}
+        {error && <p className="error-message">{error}</p>}
+      </div>
     </FormItemContext.Provider>
   )
 })
